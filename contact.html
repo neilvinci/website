@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact — Neil Vinci Lipaen</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-row wrap">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">
+        <svg width="16" height="16" viewBox="0 0 32 32"><path d="M6 18h4l2.5-7L16 24l3-11 2 5h5" fill="none" stroke="#14E28A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-word">Neil Vinci</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="menuToggle">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="links" id="navLinks">
+      <a href="index.html" class="nav-link">home</a>
+      <a href="experience.html" class="nav-link">experience</a>
+      <a href="contact.html" class="nav-link active">contact</a>
+      <a href="assets/Neil_Vinci_Lipaen_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">→ resume.pdf</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="contact-hero">
+    <div class="wrap">
+      <div class="status-chip"><span class="dot"></span> get in touch</div>
+      <div class="contact-big">Reach me directly at <a href="mailto:neilvinciblipaen@gmail.com">neilvinciblipaen@gmail.com</a>.</div>
+    </div>
+  </section>
+
+  <section class="wrap contact-list">
+    <div class="contact-grid-cards">
+      <div class="contact-card">
+        <div class="icon-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6 8-6"/></svg>
+        </div>
+        <div class="label">email</div>
+        <a class="value" href="mailto:neilvinciblipaen@gmail.com">neilvinciblipaen@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="18" rx="2.4"/><path d="M11 18h2"/></svg>
+        </div>
+        <div class="label">phone</div>
+        <a class="value" href="tel:+639772704872">0977 270 4872</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="4" height="11"/><circle cx="5" cy="4.6" r="1.8"/><path d="M10.5 20V9h3.6v1.8c.7-1.1 1.9-2.1 3.9-2.1 3 0 3.9 1.9 3.9 4.9V20h-4v-5.6c0-1.3-.5-2.2-1.7-2.2-1 0-1.6.7-1.9 1.4-.1.3-.1.6-.1 1V20h-3.7Z"/></svg>
+        </div>
+        <div class="label">linkedin</div>
+        <a class="value" href="https://linkedin.com/in/neilvinci" target="_blank" rel="noopener">/in/neilvinci</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B0B0C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-12a7 7 0 0 0-14 0c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        </div>
+        <div class="label">location</div>
+        <div class="value">Manila, Philippines</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" style="padding-top:56px;">
+    <div class="section-eyebrow">availability</div>
+    <h2 class="section-title">Open to Customer Success and account management roles — remote or Manila-based.</h2>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <div class="footer-brand">© 2026 NEIL VINCI BISNAR LIPAEN · MANILA, PH</div>
+    <div class="footer-links">
+      <a href="mailto:neilvinciblipaen@gmail.com">email</a>
+      <a href="https://linkedin.com/in/neilvinci" target="_blank" rel="noopener">linkedin</a>
+      <a href="index.html">home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
+</body>
+</html>
