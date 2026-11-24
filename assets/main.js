@@ -34,11 +34,22 @@
         else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); toggle.focus(); }
       }
     });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1120 && !menu.hidden) setOpen(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1240 && !menu.hidden) setOpen(false); });
   }
 
+  /* ---------- Account dots: each dot is one account (data-dots total, data-hi highlighted) ---------- */
+  $$('[data-dots]').forEach(function (el) {
+    var n = parseInt(el.dataset.dots, 10) || 0, hi = parseInt(el.dataset.hi, 10) || 0, frag = document.createDocumentFragment();
+    for (var i = 0; i < n; i++) {
+      var d = document.createElement('i');
+      if (i < hi) { d.className = 'hi'; d.style.setProperty('--n', i); }
+      frag.appendChild(d);
+    }
+    el.appendChild(frag);
+  });
+
   /* ---------- Reveals ---------- */
-  var revealables = $$('[data-reveal], .rl, .beat, .month, .ledger, .hub');
+  var revealables = $$('[data-reveal], .rl, .beat, .dots, .hub');
   if ('IntersectionObserver' in window && !reduce.matches) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -49,9 +60,9 @@
   } else {
     revealables.forEach(function (el) { el.classList.add('is-in'); });
   }
-  $$('.hero .rl').forEach(function (el) { requestAnimationFrame(function () { el.classList.add('is-in'); }); });
+  $$('.hero .rl, .hero [data-reveal]').forEach(function (el) { requestAnimationFrame(function () { el.classList.add('is-in'); }); });
 
-  /* ---------- Number counting (Spotify figures only) ---------- */
+  /* ---------- Number counting (Spotify figures on the experience page only) ---------- */
   var counters = $$('[data-count]');
   if (counters.length && 'IntersectionObserver' in window && !reduce.matches) {
     var cio = new IntersectionObserver(function (entries) {
